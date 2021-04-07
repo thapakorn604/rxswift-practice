@@ -15,14 +15,12 @@ enum ProfileEndpoint {
 
 extension ProfileEndpoint: Request {
   var path: String {
-    
     switch self {
     case .getProfile:
       return "users/defunkt"
     case .getRepositories:
       return "users/defunkt/repos"
     }
-    
   }
   
   var method: String {
@@ -43,12 +41,12 @@ class ProfileUseCase: ProfileUseCaseDomain {
   }
   
   func getProfile() -> Observable<Profile> {
-    let response: Observable<BaseResult<Profile>> = network.call(ProfileEndpoint.getRepositories)
-    return response.map({$0.result})
+    let response: Observable<Profile> = network.call(ProfileEndpoint.getRepositories)
+    return response
   }
   
   func getRepositories() -> Observable<Repositories> {
-    let response: Observable<BaseResult<Repositories>> = network.call(ProfileEndpoint.getRepositories)
-    return response.map({$0.result})
+    let response: Observable<Repositories> = network.call(ProfileEndpoint.getRepositories)
+    return response
   }
 }

@@ -16,7 +16,6 @@
 		4261B1EB261AEF8300A35EFE /* UserProfileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261B1EA261AEF8300A35EFE /* UserProfileUITests.swift */; };
 		4261B22E261B0D8100A35EFE /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261B22D261B0D8100A35EFE /* Networkable.swift */; };
 		4261B233261B0F5200A35EFE /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261B232261B0F5200A35EFE /* Requestable.swift */; };
-		4261B243261B16FE00A35EFE /* BaseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261B242261B16FE00A35EFE /* BaseResult.swift */; };
 		4261B251261B1C6200A35EFE /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261B250261B1C6200A35EFE /* Scene.swift */; };
 		4261B259261B1CCF00A35EFE /* SceneProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261B258261B1CCF00A35EFE /* SceneProtocol.swift */; };
 		4261B264261B241300A35EFE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261B263261B241300A35EFE /* BaseViewController.swift */; };
@@ -24,6 +23,9 @@
 		4261B271261B29B100A35EFE /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261B270261B29B100A35EFE /* Repositories.swift */; };
 		4261B276261CB33E00A35EFE /* ProfileUseCaseDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261B275261CB33E00A35EFE /* ProfileUseCaseDomain.swift */; };
 		4261B282261CB59800A35EFE /* ProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261B281261CB59800A35EFE /* ProfileUseCase.swift */; };
+		42970B6F261D6420007369FD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42970B6E261D6420007369FD /* ProfileViewModel.swift */; };
+		42970B74261D67AC007369FD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42970B73261D67AC007369FD /* ProfileViewController.swift */; };
+		42D5F00D261CC25A00BE53C0 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D5F00C261CC25A00BE53C0 /* UIImageView+Extension.swift */; };
 		7FC2C57999A387B98E61CCA7 /* Pods_UserProfile_UserProfileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA727148900B0AF866E74C23 /* Pods_UserProfile_UserProfileUITests.framework */; };
 		B3363F5CDAF59602CED573E8 /* Pods_UserProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54D1DDFE97417EACA01D7B3 /* Pods_UserProfile.framework */; };
 		F00AFACD2DED342CCE6C9A81 /* Pods_UserProfileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BED7D5EC07D4779170D3E7C /* Pods_UserProfileTests.framework */; };
@@ -63,7 +65,6 @@
 		4261B1EC261AEF8300A35EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4261B22D261B0D8100A35EFE /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
 		4261B232261B0F5200A35EFE /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
-		4261B242261B16FE00A35EFE /* BaseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResult.swift; sourceTree = "<group>"; };
 		4261B250261B1C6200A35EFE /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		4261B258261B1CCF00A35EFE /* SceneProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneProtocol.swift; sourceTree = "<group>"; };
 		4261B263261B241300A35EFE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +72,9 @@
 		4261B270261B29B100A35EFE /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
 		4261B275261CB33E00A35EFE /* ProfileUseCaseDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCaseDomain.swift; sourceTree = "<group>"; };
 		4261B281261CB59800A35EFE /* ProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCase.swift; sourceTree = "<group>"; };
+		42970B6E261D6420007369FD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		42970B73261D67AC007369FD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		42D5F00C261CC25A00BE53C0 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		55C7B59EC8AD0A6C5BD2C8A2 /* Pods-UserProfile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserProfile.release.xcconfig"; path = "Target Support Files/Pods-UserProfile/Pods-UserProfile.release.xcconfig"; sourceTree = "<group>"; };
 		89FAFEE46A9A9013D793D13B /* Pods-UserProfileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserProfileTests.release.xcconfig"; path = "Target Support Files/Pods-UserProfileTests/Pods-UserProfileTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C96C6BBA460BCAF6FC44FC1 /* Pods-UserProfile-UserProfileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserProfile-UserProfileUITests.debug.xcconfig"; path = "Target Support Files/Pods-UserProfile-UserProfileUITests/Pods-UserProfile-UserProfileUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				4261B220261B018B00A35EFE /* Network */,
+				42D5F00B261CC23B00BE53C0 /* Util */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -238,7 +243,6 @@
 		4261B241261B16A300A35EFE /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				4261B242261B16FE00A35EFE /* BaseResult.swift */,
 				4261B268261B283D00A35EFE /* Profile.swift */,
 				4261B270261B29B100A35EFE /* Repositories.swift */,
 			);
@@ -278,6 +282,8 @@
 		4261B24E261B1BF600A35EFE /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				42970B73261D67AC007369FD /* ProfileViewController.swift */,
+				42970B6E261D6420007369FD /* ProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -287,6 +293,14 @@
 			children = (
 			);
 			path = CommitList;
+			sourceTree = "<group>";
+		};
+		42D5F00B261CC23B00BE53C0 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				42D5F00C261CC25A00BE53C0 /* UIImageView+Extension.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		745A4FD59302881209F064A2 /* Frameworks */ = {
@@ -541,13 +555,15 @@
 				4261B282261CB59800A35EFE /* ProfileUseCase.swift in Sources */,
 				4261B271261B29B100A35EFE /* Repositories.swift in Sources */,
 				4261B276261CB33E00A35EFE /* ProfileUseCaseDomain.swift in Sources */,
+				42970B74261D67AC007369FD /* ProfileViewController.swift in Sources */,
 				4261B1C9261AEF8200A35EFE /* AppDelegate.swift in Sources */,
 				4261B22E261B0D8100A35EFE /* Networkable.swift in Sources */,
+				42D5F00D261CC25A00BE53C0 /* UIImageView+Extension.swift in Sources */,
 				4261B259261B1CCF00A35EFE /* SceneProtocol.swift in Sources */,
 				4261B251261B1C6200A35EFE /* Scene.swift in Sources */,
 				4261B264261B241300A35EFE /* BaseViewController.swift in Sources */,
+				42970B6F261D6420007369FD /* ProfileViewModel.swift in Sources */,
 				4261B1CB261AEF8200A35EFE /* SceneDelegate.swift in Sources */,
-				4261B243261B16FE00A35EFE /* BaseResult.swift in Sources */,
 				4261B269261B283D00A35EFE /* Profile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
