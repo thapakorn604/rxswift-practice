@@ -16,7 +16,7 @@
 		4261B1EB261AEF8300A35EFE /* UserProfileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261B1EA261AEF8300A35EFE /* UserProfileUITests.swift */; };
 		4261B22E261B0D8100A35EFE /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261B22D261B0D8100A35EFE /* Networkable.swift */; };
 		4261B233261B0F5200A35EFE /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261B232261B0F5200A35EFE /* Requestable.swift */; };
-		4261B251261B1C6200A35EFE /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261B250261B1C6200A35EFE /* Scene.swift */; };
+		4261B251261B1C6200A35EFE /* AppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261B250261B1C6200A35EFE /* AppScene.swift */; };
 		4261B259261B1CCF00A35EFE /* SceneProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261B258261B1CCF00A35EFE /* SceneProtocol.swift */; };
 		4261B264261B241300A35EFE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261B263261B241300A35EFE /* BaseViewController.swift */; };
 		4261B269261B283D00A35EFE /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261B268261B283D00A35EFE /* Profile.swift */; };
@@ -25,6 +25,13 @@
 		4261B282261CB59800A35EFE /* ProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4261B281261CB59800A35EFE /* ProfileUseCase.swift */; };
 		42970B6F261D6420007369FD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42970B6E261D6420007369FD /* ProfileViewModel.swift */; };
 		42970B74261D67AC007369FD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42970B73261D67AC007369FD /* ProfileViewController.swift */; };
+		42970B96261D7199007369FD /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42970B94261D7199007369FD /* RepositoryCell.swift */; };
+		42970B97261D7199007369FD /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42970B95261D7199007369FD /* RepositoryCell.xib */; };
+		42970B9C261D7214007369FD /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42970B9B261D7214007369FD /* RepositoryViewModel.swift */; };
+		42970BA1261D75C8007369FD /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42970BA0261D75C8007369FD /* NumberFormatter.swift */; };
+		42970BAF261D99F4007369FD /* ProfileUseCaseProviderDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42970BAE261D99F4007369FD /* ProfileUseCaseProviderDomain.swift */; };
+		42970BB4261D9A77007369FD /* ProfileUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42970BB3261D9A77007369FD /* ProfileUseCaseProvider.swift */; };
+		42970BC5261DA5AE007369FD /* AppMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42970BC4261DA5AE007369FD /* AppMaker.swift */; };
 		42D5F00D261CC25A00BE53C0 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D5F00C261CC25A00BE53C0 /* UIImageView+Extension.swift */; };
 		7FC2C57999A387B98E61CCA7 /* Pods_UserProfile_UserProfileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA727148900B0AF866E74C23 /* Pods_UserProfile_UserProfileUITests.framework */; };
 		B3363F5CDAF59602CED573E8 /* Pods_UserProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54D1DDFE97417EACA01D7B3 /* Pods_UserProfile.framework */; };
@@ -65,7 +72,7 @@
 		4261B1EC261AEF8300A35EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4261B22D261B0D8100A35EFE /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
 		4261B232261B0F5200A35EFE /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
-		4261B250261B1C6200A35EFE /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		4261B250261B1C6200A35EFE /* AppScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScene.swift; sourceTree = "<group>"; };
 		4261B258261B1CCF00A35EFE /* SceneProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneProtocol.swift; sourceTree = "<group>"; };
 		4261B263261B241300A35EFE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4261B268261B283D00A35EFE /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -74,6 +81,13 @@
 		4261B281261CB59800A35EFE /* ProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCase.swift; sourceTree = "<group>"; };
 		42970B6E261D6420007369FD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		42970B73261D67AC007369FD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		42970B94261D7199007369FD /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		42970B95261D7199007369FD /* RepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
+		42970B9B261D7214007369FD /* RepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
+		42970BA0261D75C8007369FD /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
+		42970BAE261D99F4007369FD /* ProfileUseCaseProviderDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCaseProviderDomain.swift; sourceTree = "<group>"; };
+		42970BB3261D9A77007369FD /* ProfileUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCaseProvider.swift; sourceTree = "<group>"; };
+		42970BC4261DA5AE007369FD /* AppMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMaker.swift; sourceTree = "<group>"; };
 		42D5F00C261CC25A00BE53C0 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		55C7B59EC8AD0A6C5BD2C8A2 /* Pods-UserProfile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserProfile.release.xcconfig"; path = "Target Support Files/Pods-UserProfile/Pods-UserProfile.release.xcconfig"; sourceTree = "<group>"; };
 		89FAFEE46A9A9013D793D13B /* Pods-UserProfileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserProfileTests.release.xcconfig"; path = "Target Support Files/Pods-UserProfileTests/Pods-UserProfileTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -215,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				4261B220261B018B00A35EFE /* Network */,
+				42970B93261D70F4007369FD /* TableCell */,
 				42D5F00B261CC23B00BE53C0 /* Util */,
 			);
 			path = Repository;
@@ -233,7 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				4261B263261B241300A35EFE /* BaseViewController.swift */,
-				4261B250261B1C6200A35EFE /* Scene.swift */,
+				4261B250261B1C6200A35EFE /* AppScene.swift */,
+				42970BC4261DA5AE007369FD /* AppMaker.swift */,
 				4261B24E261B1BF600A35EFE /* Profile */,
 				4261B24F261B1C1900A35EFE /* CommitList */,
 			);
@@ -252,6 +268,7 @@
 		4261B24A261B1B5200A35EFE /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				42970BAE261D99F4007369FD /* ProfileUseCaseProviderDomain.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -275,6 +292,7 @@
 		4261B24D261B1B7200A35EFE /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				42970BB3261D9A77007369FD /* ProfileUseCaseProvider.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -284,6 +302,8 @@
 			children = (
 				42970B73261D67AC007369FD /* ProfileViewController.swift */,
 				42970B6E261D6420007369FD /* ProfileViewModel.swift */,
+				42970B94261D7199007369FD /* RepositoryCell.swift */,
+				42970B9B261D7214007369FD /* RepositoryViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -295,10 +315,19 @@
 			path = CommitList;
 			sourceTree = "<group>";
 		};
+		42970B93261D70F4007369FD /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				42970B95261D7199007369FD /* RepositoryCell.xib */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
 		42D5F00B261CC23B00BE53C0 /* Util */ = {
 			isa = PBXGroup;
 			children = (
 				42D5F00C261CC25A00BE53C0 /* UIImageView+Extension.swift */,
+				42970BA0261D75C8007369FD /* NumberFormatter.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -424,6 +453,7 @@
 				4261B1D5261AEF8200A35EFE /* LaunchScreen.storyboard in Resources */,
 				4261B1D2261AEF8200A35EFE /* Assets.xcassets in Resources */,
 				4261B1D0261AEF8200A35EFE /* Main.storyboard in Resources */,
+				42970B97261D7199007369FD /* RepositoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,16 +581,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42970B9C261D7214007369FD /* RepositoryViewModel.swift in Sources */,
+				42970B96261D7199007369FD /* RepositoryCell.swift in Sources */,
 				4261B233261B0F5200A35EFE /* Requestable.swift in Sources */,
 				4261B282261CB59800A35EFE /* ProfileUseCase.swift in Sources */,
+				42970BAF261D99F4007369FD /* ProfileUseCaseProviderDomain.swift in Sources */,
+				42970BA1261D75C8007369FD /* NumberFormatter.swift in Sources */,
 				4261B271261B29B100A35EFE /* Repositories.swift in Sources */,
 				4261B276261CB33E00A35EFE /* ProfileUseCaseDomain.swift in Sources */,
 				42970B74261D67AC007369FD /* ProfileViewController.swift in Sources */,
 				4261B1C9261AEF8200A35EFE /* AppDelegate.swift in Sources */,
+				42970BC5261DA5AE007369FD /* AppMaker.swift in Sources */,
 				4261B22E261B0D8100A35EFE /* Networkable.swift in Sources */,
 				42D5F00D261CC25A00BE53C0 /* UIImageView+Extension.swift in Sources */,
 				4261B259261B1CCF00A35EFE /* SceneProtocol.swift in Sources */,
-				4261B251261B1C6200A35EFE /* Scene.swift in Sources */,
+				4261B251261B1C6200A35EFE /* AppScene.swift in Sources */,
+				42970BB4261D9A77007369FD /* ProfileUseCaseProvider.swift in Sources */,
 				4261B264261B241300A35EFE /* BaseViewController.swift in Sources */,
 				42970B6F261D6420007369FD /* ProfileViewModel.swift in Sources */,
 				4261B1CB261AEF8200A35EFE /* SceneDelegate.swift in Sources */,

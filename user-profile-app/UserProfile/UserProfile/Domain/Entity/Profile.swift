@@ -1,33 +1,24 @@
-//
-//  UserProfile.swift
-//  UserProfile
-//
-//  Created by Oat on 5/4/2564 BE.
-//
+// Generated with quicktype
+// For more options, try https://app.quicktype.io
 
 import Foundation
 
 struct Profile: Codable {
   let login: String
   let id: Int
-  let nodeID: String
-  let avatarURL: String
-  let gravatarID: String
-  let url, htmlURL, followersURL: String
-  let followingURL, gistsURL, starredURL: String
-  let subscriptionsURL, organizationsURL, reposURL: String
-  let eventsURL: String
-  let receivedEventsURL: String
-  let type: String
+  let nodeID, avatarURL, gravatarID, url: String
+  let htmlURL, followersURL, followingURL, gistsURL: String
+  let starredURL, subscriptionsURL, organizationsURL, reposURL: String
+  let eventsURL, receivedEventsURL, type: String
   let siteAdmin: Bool
   let name: String
-  let company: String
+  let company: String?
   let blog: String
-  let location, email, hireable: String
+  let location, email, hireable: String?
   let bio: String
-  let twitterUsername: String
+  let twitterUsername: String?
   let publicRepos, publicGists, followers, following: Int
-  let createdAt, updatedAt: Date
+  let createdAt, updatedAt: String
   
   enum CodingKeys: String, CodingKey {
     case login, id
@@ -56,3 +47,4 @@ struct Profile: Codable {
     case updatedAt = "updated_at"
   }
 }
+

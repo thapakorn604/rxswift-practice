@@ -16,14 +16,26 @@ class ProfileViewController: BaseViewController<ProfileViewModelType> {
   }
   
   override func setupView() {
+    super.setupView()
     
+    // TODO: Add RepositoryCell
   }
   
   override func bindInput(viewModel: ProfileViewModelType) {
-    
+    rx.methodInvoked(#selector(viewDidLoad))
+        .map({(_) in ()})
+        .bind(to: viewModel.inputs.viewDidLoad)
+        .disposed(by: bag)
   }
   
   override func bindOutput(viewModel: ProfileViewModelType) {
-    <#code#>
+    viewModel.outputs.profile.subscribe { (profile) in
+      // map profile UI
+    }
+    
+    viewModel.outputs.repositories.drive(onNext: { (result) in
+      // map tableCell
+    })
+      .disposed(by: bag)
   }
 }

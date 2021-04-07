@@ -15,6 +15,15 @@ class BaseViewController<ViewModel>: UIViewController, UIGestureRecognizerDelega
   var viewModel: ViewModel!
   var disableBackSwipe: Bool = false
   
+  init(viewModel: ViewModel) {
+    super.init(nibName: nil, bundle: nil)
+    self.viewModel = viewModel
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+     super.init(coder: aDecoder)
+  }
+  
   override func loadView() {
     super.loadView()
     setupView()

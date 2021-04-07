@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Request {
+public protocol Request {
   var path: String { get }
   var method: String { get }
   var body: Codable? { get }

@@ -8,6 +8,7 @@ target 'UserProfile' do
   pod 'RxCocoa'
   pod 'RxDataSources'
   pod 'Kingfisher'
+  pod 'Alamofire'
 
   # Pods for UserProfile
 
