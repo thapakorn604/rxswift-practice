@@ -21,7 +21,6 @@ final class URLSessionNetwork: Networkable {
       let task = URLSession.shared.dataTask(with: request.makeRequest(baseUrl: baseUrl)) { (data, response, error) in
         
         do {
-          
           guard let data = data else {
             print("onError")
             observer.onError(NSError())
@@ -36,7 +35,7 @@ final class URLSessionNetwork: Networkable {
           
         } catch {
           print("onCatch: \(error.localizedDescription)")
-          debugPrint(error)
+          debugPrint("debugDescription: \(error)")
           observer.onError(error)
         }
       }

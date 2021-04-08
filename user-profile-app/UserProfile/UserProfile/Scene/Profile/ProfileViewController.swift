@@ -11,14 +11,28 @@ import Kingfisher
 
 class ProfileViewController: BaseViewController<ProfileViewModelType> {
   
+  @IBOutlet weak var profileName: UILabel!
+  @IBOutlet weak var userName: UILabel!
+  @IBOutlet weak var bioDescription: UILabel!
+  @IBOutlet weak var repositoriesCount: UILabel!
+  @IBOutlet weak var starsCount: UILabel!
+  @IBOutlet weak var followersCount: UILabel!
+  @IBOutlet weak var followingCount: UILabel!
+  @IBOutlet weak var avatarImage: UIImageView!
+  @IBOutlet weak var backgroundImage: UIImageView!
+  @IBOutlet weak var tableView: UITableView!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
   }
   
   override func setupView() {
     super.setupView()
+    self.avatarImage.roundedImageView()
+    self.backgroundImage.darkenImageView()
     
-    // TODO: Add RepositoryCell
+    let nib: UINib = UINib(nibName: TableViews.repositoryCell, bundle: .this)
+    tableView.register(nib, forCellReuseIdentifier: TableViews.repositoryCell)
   }
   
   override func bindInput(viewModel: ProfileViewModelType) {
@@ -29,12 +43,22 @@ class ProfileViewController: BaseViewController<ProfileViewModelType> {
   }
   
   override func bindOutput(viewModel: ProfileViewModelType) {
-    viewModel.outputs.profile.subscribe(onNext: { (profile) in
-      // map profile to
+    viewModel.outputs.profileInfo.drive(onNext: { (profileInfo) in
+      
+      self.profileName.text = profileInfo.profileName
+      self.userName.text = profileInfo.userName
+      self.bioDescription.text = profileInfo.bioDescription
+      self.repositoriesCount.text = profileInfo.repositoriesCount
+      self.starsCount.text = profileInfo.starsCount
+      self.followersCount.text = profileInfo.followersCount
+      self.followingCount.text = profileInfo.followingCount
+      self.avatarImage.setImage(profileInfo.avatarURL)
+      
     }).disposed(by: bag)
     
-    viewModel.outputs.repositories.drive(onNext: { (result) in
-      // map result to tableCell
-    }).disposed(by: bag)
+    
+    viewModel.outputs.repositories.drive(tableView.rx.items(cellIdentifier: TableViews.repositoryCell, cellType: RepositoryCell.self)) { (row, repository, cell) in
+      cell.bind(to: repository)
+    }.disposed(by: bag)
   }
 }

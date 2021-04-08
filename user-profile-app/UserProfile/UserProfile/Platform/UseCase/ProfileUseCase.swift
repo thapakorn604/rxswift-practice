@@ -41,13 +41,11 @@ class ProfileUseCase: ProfileUseCaseDomain {
   }
   
   func getProfile() -> Observable<Profile> {
-    print("calling getProfile")
     let response: Observable<Profile> = network.call(ProfileEndpoint.getProfile)
     return response
   }
   
   func getRepositories() -> Observable<Repositories> {
-    print("calling getRepositories")
     let response: Observable<Repositories> = network.call(ProfileEndpoint.getRepositories)
     return response
   }

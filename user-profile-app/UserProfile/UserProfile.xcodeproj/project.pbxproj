@@ -32,6 +32,13 @@
 		42970BAF261D99F4007369FD /* ProfileUseCaseProviderDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42970BAE261D99F4007369FD /* ProfileUseCaseProviderDomain.swift */; };
 		42970BB4261D9A77007369FD /* ProfileUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42970BB3261D9A77007369FD /* ProfileUseCaseProvider.swift */; };
 		42970BC5261DA5AE007369FD /* AppMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42970BC4261DA5AE007369FD /* AppMaker.swift */; };
+		42AE4127261EDFB0007F7970 /* ProfileInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE4126261EDFB0007F7970 /* ProfileInfoViewModel.swift */; };
+		42AE412D261F0666007F7970 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE412C261F0666007F7970 /* Storyboard.swift */; };
+		42AE4132261F068A007F7970 /* TableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE4131261F068A007F7970 /* TableViews.swift */; };
+		42AE4137261F06A7007F7970 /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE4136261F06A7007F7970 /* ViewControllers.swift */; };
+		42AE413C261F06B5007F7970 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE413B261F06B5007F7970 /* Views.swift */; };
+		42AE4141261F1AC1007F7970 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE4140261F1AC1007F7970 /* UIViewController+Extension.swift */; };
+		42AE4146261F1B41007F7970 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE4145261F1B41007F7970 /* Coordinator.swift */; };
 		42D5F00D261CC25A00BE53C0 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D5F00C261CC25A00BE53C0 /* UIImageView+Extension.swift */; };
 		7FC2C57999A387B98E61CCA7 /* Pods_UserProfile_UserProfileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA727148900B0AF866E74C23 /* Pods_UserProfile_UserProfileUITests.framework */; };
 		B3363F5CDAF59602CED573E8 /* Pods_UserProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54D1DDFE97417EACA01D7B3 /* Pods_UserProfile.framework */; };
@@ -88,6 +95,13 @@
 		42970BAE261D99F4007369FD /* ProfileUseCaseProviderDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCaseProviderDomain.swift; sourceTree = "<group>"; };
 		42970BB3261D9A77007369FD /* ProfileUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCaseProvider.swift; sourceTree = "<group>"; };
 		42970BC4261DA5AE007369FD /* AppMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMaker.swift; sourceTree = "<group>"; };
+		42AE4126261EDFB0007F7970 /* ProfileInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoViewModel.swift; sourceTree = "<group>"; };
+		42AE412C261F0666007F7970 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		42AE4131261F068A007F7970 /* TableViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViews.swift; sourceTree = "<group>"; };
+		42AE4136261F06A7007F7970 /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
+		42AE413B261F06B5007F7970 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+		42AE4140261F1AC1007F7970 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		42AE4145261F1B41007F7970 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		42D5F00C261CC25A00BE53C0 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		55C7B59EC8AD0A6C5BD2C8A2 /* Pods-UserProfile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserProfile.release.xcconfig"; path = "Target Support Files/Pods-UserProfile/Pods-UserProfile.release.xcconfig"; sourceTree = "<group>"; };
 		89FAFEE46A9A9013D793D13B /* Pods-UserProfileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserProfileTests.release.xcconfig"; path = "Target Support Files/Pods-UserProfileTests/Pods-UserProfileTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -211,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				4261B258261B1CCF00A35EFE /* SceneProtocol.swift */,
+				42AE4145261F1B41007F7970 /* Coordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -228,6 +243,7 @@
 		4261B21F261B017600A35EFE /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				42AE412B261F063C007F7970 /* Constant */,
 				4261B220261B018B00A35EFE /* Network */,
 				42970B93261D70F4007369FD /* TableCell */,
 				42D5F00B261CC23B00BE53C0 /* Util */,
@@ -304,6 +320,7 @@
 				42970B6E261D6420007369FD /* ProfileViewModel.swift */,
 				42970B94261D7199007369FD /* RepositoryCell.swift */,
 				42970B9B261D7214007369FD /* RepositoryViewModel.swift */,
+				42AE4126261EDFB0007F7970 /* ProfileInfoViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -323,11 +340,23 @@
 			path = TableCell;
 			sourceTree = "<group>";
 		};
+		42AE412B261F063C007F7970 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				42AE412C261F0666007F7970 /* Storyboard.swift */,
+				42AE4131261F068A007F7970 /* TableViews.swift */,
+				42AE4136261F06A7007F7970 /* ViewControllers.swift */,
+				42AE413B261F06B5007F7970 /* Views.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		42D5F00B261CC23B00BE53C0 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				42D5F00C261CC25A00BE53C0 /* UIImageView+Extension.swift */,
 				42970BA0261D75C8007369FD /* NumberFormatter.swift */,
+				42D5F00C261CC25A00BE53C0 /* UIImageView+Extension.swift */,
+				42AE4140261F1AC1007F7970 /* UIViewController+Extension.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -582,19 +611,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				42970B9C261D7214007369FD /* RepositoryViewModel.swift in Sources */,
+				42AE4127261EDFB0007F7970 /* ProfileInfoViewModel.swift in Sources */,
+				42AE4137261F06A7007F7970 /* ViewControllers.swift in Sources */,
 				42970B96261D7199007369FD /* RepositoryCell.swift in Sources */,
 				4261B233261B0F5200A35EFE /* Requestable.swift in Sources */,
 				4261B282261CB59800A35EFE /* ProfileUseCase.swift in Sources */,
+				42AE4132261F068A007F7970 /* TableViews.swift in Sources */,
 				42970BAF261D99F4007369FD /* ProfileUseCaseProviderDomain.swift in Sources */,
+				42AE4146261F1B41007F7970 /* Coordinator.swift in Sources */,
 				42970BA1261D75C8007369FD /* NumberFormatter.swift in Sources */,
 				4261B271261B29B100A35EFE /* Repositories.swift in Sources */,
 				4261B276261CB33E00A35EFE /* ProfileUseCaseDomain.swift in Sources */,
 				42970B74261D67AC007369FD /* ProfileViewController.swift in Sources */,
 				4261B1C9261AEF8200A35EFE /* AppDelegate.swift in Sources */,
 				42970BC5261DA5AE007369FD /* AppMaker.swift in Sources */,
+				42AE4141261F1AC1007F7970 /* UIViewController+Extension.swift in Sources */,
+				42AE412D261F0666007F7970 /* Storyboard.swift in Sources */,
 				4261B22E261B0D8100A35EFE /* Networkable.swift in Sources */,
 				42D5F00D261CC25A00BE53C0 /* UIImageView+Extension.swift in Sources */,
 				4261B259261B1CCF00A35EFE /* SceneProtocol.swift in Sources */,
+				42AE413C261F06B5007F7970 /* Views.swift in Sources */,
 				4261B251261B1C6200A35EFE /* AppScene.swift in Sources */,
 				42970BB4261D9A77007369FD /* ProfileUseCaseProvider.swift in Sources */,
 				4261B264261B241300A35EFE /* BaseViewController.swift in Sources */,

@@ -15,7 +15,7 @@ protocol ProfileViewModelInput {
 }
 
 protocol  ProfileViewModelOutput {
-  var profile: Observable<Profile> { get }
+  var profileInfo: Driver<ProfileInfoViewModel> { get }
   var repositories: Driver<[RepositoryViewModel]> { get }
 }
 
@@ -28,7 +28,7 @@ class ProfileViewModel: ProfileViewModelInput, ProfileViewModelOutput, ProfileVi
   var viewDidLoad: PublishRelay<Void> = .init()
   var selectRepository: PublishRelay<Repository> = .init()
   
-  var profile: Observable<Profile>
+  var profileInfo: Driver<ProfileInfoViewModel>
   var repositories: Driver<[RepositoryViewModel]>
   
   private let bag: DisposeBag = DisposeBag()
@@ -39,9 +39,11 @@ class ProfileViewModel: ProfileViewModelInput, ProfileViewModelOutput, ProfileVi
   init(provider: ProfileUseCaseProviderDomain) {
     let profileUseCase: ProfileUseCase = provider.makeProfileUseCase()
     
-    profile = viewDidLoad.flatMapLatest { () -> Observable<Profile> in
+    profileInfo = viewDidLoad.flatMapLatest { () -> Observable<Profile> in
       profileUseCase.getProfile()
-    }
+    }.map({ (profileInfo) -> ProfileInfoViewModel in
+      return ProfileInfoViewModel.init(profile: profileInfo)
+    }).asDriver(onErrorJustReturn: ProfileInfoViewModel.init())
     
     repositories = viewDidLoad.flatMapLatest { () -> Observable<Repositories> in
       profileUseCase.getRepositories()
