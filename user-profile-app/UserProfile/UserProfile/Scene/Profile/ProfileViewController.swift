@@ -23,19 +23,18 @@ class ProfileViewController: BaseViewController<ProfileViewModelType> {
   
   override func bindInput(viewModel: ProfileViewModelType) {
     rx.methodInvoked(#selector(viewDidLoad))
-        .map({(_) in ()})
-        .bind(to: viewModel.inputs.viewDidLoad)
-        .disposed(by: bag)
+      .map({(_) in ()})
+      .bind(to: viewModel.inputs.viewDidLoad)
+      .disposed(by: bag)
   }
   
   override func bindOutput(viewModel: ProfileViewModelType) {
-    viewModel.outputs.profile.subscribe { (profile) in
-      // map profile UI
-    }
+    viewModel.outputs.profile.subscribe(onNext: { (profile) in
+      // map profile to
+    }).disposed(by: bag)
     
     viewModel.outputs.repositories.drive(onNext: { (result) in
-      // map tableCell
-    })
-      .disposed(by: bag)
+      // map result to tableCell
+    }).disposed(by: bag)
   }
 }
