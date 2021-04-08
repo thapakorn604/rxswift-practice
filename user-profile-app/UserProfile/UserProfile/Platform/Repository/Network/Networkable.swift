@@ -15,7 +15,6 @@ final class URLSessionNetwork: Networkable {
   
   func call<T: Codable>(_ request: Request) -> Observable<T> {
     let baseUrl = self.baseUrl
-    print(request.makeRequest(baseUrl: baseUrl))
     return .create { (observer) -> Disposable in
       
       let task = URLSession.shared.dataTask(with: request.makeRequest(baseUrl: baseUrl)) { (data, response, error) in

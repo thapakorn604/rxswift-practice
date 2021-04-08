@@ -16,6 +16,7 @@ protocol CommitListViewModelInput {
 protocol  CommitListViewModelOutput {
   //  var profileInfo: Driver<ProfileInfoViewModel> { get }
   var repositoryInfo: RepositoryViewModel { get }
+  var commit: Driver<CommitViewModel> { get }
 }
 
 protocol CommitListViewModelType {
@@ -24,10 +25,10 @@ protocol CommitListViewModelType {
 }
 
 class CommitListViewModel: CommitListViewModelInput, CommitListViewModelOutput, CommitListViewModelType {
-  
   var viewDidLoad: PublishRelay<Void> = .init()
   
   var repositoryInfo: RepositoryViewModel
+  var commit: Driver<CommitViewModel>
   
   private let bag: DisposeBag = DisposeBag()
   
@@ -35,7 +36,13 @@ class CommitListViewModel: CommitListViewModelInput, CommitListViewModelOutput, 
   var outputs: CommitListViewModelOutput { return self }
   
   init(repository: RepositoryViewModel, provider: ProfileUseCaseProviderDomain) {
-    //    let profileUseCase: ProfileUseCase = provider.makeProfileUseCase()
+    let profileUseCase: ProfileUseCase = provider.makeProfileUseCase()
     repositoryInfo = repository
+    
+    commit = viewDidLoad.flatMapLatest { () -> Observable<Branch> in
+      profileUseCase.getCommitList(repositoryName: repository.title)
+    }.map({ (branch) -> CommitViewModel in
+      return CommitViewModel.init(branch: branch)
+    }).asDriver(onErrorJustReturn: CommitViewModel.init())
   }
 }

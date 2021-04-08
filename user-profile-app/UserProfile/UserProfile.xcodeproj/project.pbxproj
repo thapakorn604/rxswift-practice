@@ -42,6 +42,9 @@
 		42AE4153261F5410007F7970 /* CommitListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE4152261F5410007F7970 /* CommitListViewModel.swift */; };
 		42AE4158261F5527007F7970 /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE4157261F5527007F7970 /* Branch.swift */; };
 		42AE4173261F79F6007F7970 /* AppMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE4172261F79F6007F7970 /* AppMaker.swift */; };
+		42AE4178261F83A2007F7970 /* DateTimeFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE4177261F83A2007F7970 /* DateTimeFormats.swift */; };
+		42AE417D261F83F0007F7970 /* DateTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE417C261F83F0007F7970 /* DateTimeFormatter.swift */; };
+		42AE4185261F8485007F7970 /* CommitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE4184261F8485007F7970 /* CommitViewModel.swift */; };
 		42D5F00D261CC25A00BE53C0 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D5F00C261CC25A00BE53C0 /* UIImageView+Extension.swift */; };
 		7FC2C57999A387B98E61CCA7 /* Pods_UserProfile_UserProfileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA727148900B0AF866E74C23 /* Pods_UserProfile_UserProfileUITests.framework */; };
 		B3363F5CDAF59602CED573E8 /* Pods_UserProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54D1DDFE97417EACA01D7B3 /* Pods_UserProfile.framework */; };
@@ -108,6 +111,9 @@
 		42AE4152261F5410007F7970 /* CommitListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitListViewModel.swift; sourceTree = "<group>"; };
 		42AE4157261F5527007F7970 /* Branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
 		42AE4172261F79F6007F7970 /* AppMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMaker.swift; sourceTree = "<group>"; };
+		42AE4177261F83A2007F7970 /* DateTimeFormats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeFormats.swift; sourceTree = "<group>"; };
+		42AE417C261F83F0007F7970 /* DateTimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeFormatter.swift; sourceTree = "<group>"; };
+		42AE4184261F8485007F7970 /* CommitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitViewModel.swift; sourceTree = "<group>"; };
 		42D5F00C261CC25A00BE53C0 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		55C7B59EC8AD0A6C5BD2C8A2 /* Pods-UserProfile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserProfile.release.xcconfig"; path = "Target Support Files/Pods-UserProfile/Pods-UserProfile.release.xcconfig"; sourceTree = "<group>"; };
 		89FAFEE46A9A9013D793D13B /* Pods-UserProfileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserProfileTests.release.xcconfig"; path = "Target Support Files/Pods-UserProfileTests/Pods-UserProfileTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -337,6 +343,7 @@
 			children = (
 				42AE414D261F52A5007F7970 /* CommitListViewController.swift */,
 				42AE4152261F5410007F7970 /* CommitListViewModel.swift */,
+				42AE4184261F8485007F7970 /* CommitViewModel.swift */,
 			);
 			path = CommitList;
 			sourceTree = "<group>";
@@ -356,6 +363,7 @@
 				42AE4131261F068A007F7970 /* TableViews.swift */,
 				42AE4136261F06A7007F7970 /* ViewControllers.swift */,
 				42AE413B261F06B5007F7970 /* Views.swift */,
+				42AE4177261F83A2007F7970 /* DateTimeFormats.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -363,6 +371,7 @@
 		42D5F00B261CC23B00BE53C0 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				42AE417C261F83F0007F7970 /* DateTimeFormatter.swift */,
 				42970BA0261D75C8007369FD /* NumberFormatter.swift */,
 				42D5F00C261CC25A00BE53C0 /* UIImageView+Extension.swift */,
 				42AE4140261F1AC1007F7970 /* UIViewController+Extension.swift */,
@@ -626,10 +635,12 @@
 				42AE4137261F06A7007F7970 /* ViewControllers.swift in Sources */,
 				42970B96261D7199007369FD /* RepositoryCell.swift in Sources */,
 				4261B233261B0F5200A35EFE /* Requestable.swift in Sources */,
+				42AE4185261F8485007F7970 /* CommitViewModel.swift in Sources */,
 				42AE4158261F5527007F7970 /* Branch.swift in Sources */,
 				4261B282261CB59800A35EFE /* ProfileUseCase.swift in Sources */,
 				42AE4132261F068A007F7970 /* TableViews.swift in Sources */,
 				42970BAF261D99F4007369FD /* ProfileUseCaseProviderDomain.swift in Sources */,
+				42AE4178261F83A2007F7970 /* DateTimeFormats.swift in Sources */,
 				42AE4146261F1B41007F7970 /* Coordinator.swift in Sources */,
 				42970BA1261D75C8007369FD /* NumberFormatter.swift in Sources */,
 				4261B271261B29B100A35EFE /* Repositories.swift in Sources */,
@@ -637,6 +648,7 @@
 				42970B74261D67AC007369FD /* ProfileViewController.swift in Sources */,
 				4261B1C9261AEF8200A35EFE /* AppDelegate.swift in Sources */,
 				42AE4141261F1AC1007F7970 /* UIViewController+Extension.swift in Sources */,
+				42AE417D261F83F0007F7970 /* DateTimeFormatter.swift in Sources */,
 				42AE412D261F0666007F7970 /* Storyboards.swift in Sources */,
 				4261B22E261B0D8100A35EFE /* Networkable.swift in Sources */,
 				42D5F00D261CC25A00BE53C0 /* UIImageView+Extension.swift in Sources */,

@@ -6,8 +6,22 @@
 //
 
 import Foundation
+import UIKit
 
 class CommitListViewController: BaseViewController<CommitListViewModelType> {
+  
+  @IBOutlet weak var repositoryName: UILabel!
+  @IBOutlet weak var repositoryDescription: UILabel!
+  @IBOutlet weak var language: UILabel!
+  @IBOutlet weak var starsCount: UILabel!
+  @IBOutlet weak var forkCount: UILabel!
+  
+  @IBOutlet weak var commitMessage: UILabel!
+  @IBOutlet weak var branchName: UILabel!
+  @IBOutlet weak var authorAvatarImage: UIImageView!
+  @IBOutlet weak var author: UILabel!
+  @IBOutlet weak var committedDateTime: UILabel!
+
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -25,6 +39,21 @@ class CommitListViewController: BaseViewController<CommitListViewModelType> {
   }
   
   override func bindOutput(viewModel: CommitListViewModelType) {
-    print(viewModel.outputs.repositoryInfo.title)
+    let repositoryInfo = viewModel.outputs.repositoryInfo
+    self.repositoryName.text = repositoryInfo.title
+    self.repositoryDescription.text = repositoryInfo.description
+    self.language.text = repositoryInfo.language
+    self.starsCount.text = repositoryInfo.stars
+    self.forkCount.text = repositoryInfo.commits
+    
+    viewModel.outputs.commit.drive(onNext: { (commit) in
+      print(commit.commitMessage)
+      self.commitMessage.text = commit.commitMessage
+      self.branchName.text = commit.branchName
+      self.author.text = commit.auther
+      self.committedDateTime.text = commit.commitedDate
+      self.authorAvatarImage.setImage(commit.autherAvatarURL)
+    })
+    .disposed(by: bag)
   }
 }
