@@ -7,7 +7,6 @@
 
 import Foundation
 import RxDataSources
-import Kingfisher
 
 class ProfileViewController: BaseViewController<ProfileViewModelType> {
   
@@ -39,6 +38,11 @@ class ProfileViewController: BaseViewController<ProfileViewModelType> {
     rx.methodInvoked(#selector(viewDidLoad))
       .map({(_) in ()})
       .bind(to: viewModel.inputs.viewDidLoad)
+      .disposed(by: bag)
+    
+    tableView.rx.modelSelected(RepositoryViewModel.self)
+      .map({$0.self})
+      .bind(to: viewModel.inputs.selectRepository)
       .disposed(by: bag)
   }
   

@@ -10,15 +10,20 @@ import UIKit
 
 enum AppScene {
   case profile(ProfileViewModelType)
-  // TODO: CommitList
+  case commitList(CommitListViewModelType)
 }
 
 extension AppScene: SceneProtocol {
   var viewController: UIViewController {
     switch self {
     case let .profile(viewModel):
-      let storyboard = UIStoryboard(name: "Main", bundle: nil)
-      let viewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+      let storyboard = UIStoryboard(name: Storyboards.main, bundle: .this)
+      let viewController = storyboard.instantiateViewController(withIdentifier: ViewControllers.profileViewController) as! ProfileViewController
+      viewController.viewModel = viewModel
+      return viewController
+    case let .commitList(viewModel):
+      let storyboard = UIStoryboard(name: Storyboards.main, bundle: .this)
+      let viewController = storyboard.instantiateViewController(withIdentifier: ViewControllers.commitListController) as! CommitListViewController
       viewController.viewModel = viewModel
       return viewController
     }

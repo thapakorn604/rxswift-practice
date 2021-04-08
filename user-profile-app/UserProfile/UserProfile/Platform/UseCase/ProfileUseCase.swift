@@ -11,6 +11,7 @@ import RxSwift
 enum ProfileEndpoint {
   case getProfile
   case getRepositories
+  case getCommitList(String)
 }
 
 extension ProfileEndpoint: Request {
@@ -20,6 +21,8 @@ extension ProfileEndpoint: Request {
       return "users/defunkt"
     case .getRepositories:
       return "users/defunkt/repos"
+    case .getCommitList(let repositoryName):
+      return "repos/\(repositoryName)/branches/master"
     }
   }
   
@@ -47,6 +50,11 @@ class ProfileUseCase: ProfileUseCaseDomain {
   
   func getRepositories() -> Observable<Repositories> {
     let response: Observable<Repositories> = network.call(ProfileEndpoint.getRepositories)
+    return response
+  }
+  
+  func getCommitList(repositoryName: String) -> Observable<Branch> {
+    let response: Observable<Branch> = network.call(ProfileEndpoint.getCommitList(repositoryName))
     return response
   }
 }

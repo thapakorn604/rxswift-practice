@@ -11,4 +11,5 @@ import RxSwift
 protocol ProfileUseCaseDomain {
   func getProfile() -> Observable<Profile>
   func getRepositories() -> Observable<Repositories>
+  func getCommitList(repositoryName: String) -> Observable<Branch>
 }

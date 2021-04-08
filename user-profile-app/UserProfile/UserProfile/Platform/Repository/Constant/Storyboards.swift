@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Storyboard {
+struct Storyboards {
   static let main = "Main"
 }

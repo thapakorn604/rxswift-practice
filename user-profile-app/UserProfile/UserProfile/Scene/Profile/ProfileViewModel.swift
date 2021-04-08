@@ -11,7 +11,7 @@ import RxSwift
 
 protocol ProfileViewModelInput {
   var viewDidLoad: PublishRelay<Void> { get }
-  var selectRepository: PublishRelay<Repository> { get }
+  var selectRepository: PublishRelay<RepositoryViewModel> { get }
 }
 
 protocol  ProfileViewModelOutput {
@@ -26,7 +26,7 @@ protocol ProfileViewModelType {
 
 class ProfileViewModel: ProfileViewModelInput, ProfileViewModelOutput, ProfileViewModelType {
   var viewDidLoad: PublishRelay<Void> = .init()
-  var selectRepository: PublishRelay<Repository> = .init()
+  var selectRepository: PublishRelay<RepositoryViewModel> = .init()
   
   var profileInfo: Driver<ProfileInfoViewModel>
   var repositories: Driver<[RepositoryViewModel]>
@@ -36,7 +36,7 @@ class ProfileViewModel: ProfileViewModelInput, ProfileViewModelOutput, ProfileVi
   var inputs: ProfileViewModelInput { return self }
   var outputs: ProfileViewModelOutput { return self }
   
-  init(provider: ProfileUseCaseProviderDomain) {
+  init(coordinator: Coordinator, provider: ProfileUseCaseProviderDomain) {
     let profileUseCase: ProfileUseCase = provider.makeProfileUseCase()
     
     profileInfo = viewDidLoad.flatMapLatest { () -> Observable<Profile> in
@@ -50,5 +50,13 @@ class ProfileViewModel: ProfileViewModelInput, ProfileViewModelOutput, ProfileVi
     }.map({ (repositories) -> [RepositoryViewModel] in
       repositories.map(RepositoryViewModel.init)
     }).asDriver(onErrorJustReturn: [])
+    
+    selectRepository.flatMap { (repository) -> Observable<Void> in
+      let viewModel = CommitListViewModel(repository: repository, provider: provider)
+      let scene = AppScene.commitList(viewModel)
+      return coordinator.transition(type: .modal(scene, true))
+    }
+    .subscribe()
+    .disposed(by: bag)
   }
 }

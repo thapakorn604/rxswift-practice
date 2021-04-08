@@ -9,4 +9,5 @@ import Foundation
 
 struct ViewControllers {
   static let profileViewController = "ProfileViewController"
+  static let commitListController = "CommitListViewController"
 }

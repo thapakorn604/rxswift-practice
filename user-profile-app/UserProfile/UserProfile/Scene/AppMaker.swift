@@ -19,9 +19,10 @@ public class AppMaker {
     self.mainNetwork = mainNetwork
   }
   
-  public func make() -> SceneProtocol {
+  public func make(coordinator: Coordinator) -> SceneProtocol {
     
     let viewModel = ProfileViewModel(
+      coordinator: coordinator,
       provider: ProfileUseCaseProvider(mainNetwork: mainNetwork)
     )
     
