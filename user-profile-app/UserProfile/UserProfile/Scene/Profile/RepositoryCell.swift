@@ -17,6 +17,12 @@ class RepositoryCell: UITableViewCell {
   
   override func awakeFromNib() {
     self.selectionStyle = .none
+    
+    self.wrapView.layer.shadowColor = UIColor.black.cgColor
+    self.wrapView.layer.shadowOpacity = 0.3
+    self.wrapView.layer.shadowOffset = .zero
+    self.wrapView.layer.shadowRadius = 2
+    self.wrapView.layer.cornerRadius = 5
   }
   
   func bind(to viewModel: RepositoryViewModel) {
