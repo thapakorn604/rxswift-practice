@@ -25,13 +25,19 @@ class ProfileViewController: BaseViewController<ProfileViewModelType> {
     super.viewDidLoad()
   }
   
+  
   override func setupView() {
     super.setupView()
     self.avatarImage.roundedImageView()
-    self.backgroundImage.darkenImageView()
+    
     
     let nib: UINib = UINib(nibName: TableViews.repositoryCell, bundle: .this)
     tableView.register(nib, forCellReuseIdentifier: TableViews.repositoryCell)
+  }
+  
+  override func viewDidLayoutSubviews() {
+    self.backgroundImage.removeSublayers()
+    self.backgroundImage.darkenImageView()
   }
   
   override func bindInput(viewModel: ProfileViewModelType) {

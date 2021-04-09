@@ -30,4 +30,8 @@ extension UIImageView {
     coverLayer.opacity = 0.3
     self.layer.addSublayer(coverLayer)
   }
+  
+  func removeSublayers() {
+    self.layer.sublayers?.removeAll()
+  }
 }
