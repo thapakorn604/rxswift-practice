@@ -64,6 +64,8 @@ class ProfileViewController: BaseViewController<ProfileViewModelType> {
       self.followingCount.text = profileInfo.followingCount
       self.avatarImage.setImage(profileInfo.avatarURL)
       
+    }, onCompleted: {
+      // Implement loading
     }).disposed(by: bag)
     
     
