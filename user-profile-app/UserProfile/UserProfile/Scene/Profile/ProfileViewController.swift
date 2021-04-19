@@ -68,7 +68,6 @@ class ProfileViewController: BaseViewController<ProfileViewModelType> {
       // Implement loading
     }).disposed(by: bag)
     
-    
     viewModel.outputs.repositories.drive(tableView.rx.items(cellIdentifier: TableViews.repositoryCell, cellType: RepositoryCell.self)) { (row, repository, cell) in
       cell.bind(to: repository)
     }.disposed(by: bag)

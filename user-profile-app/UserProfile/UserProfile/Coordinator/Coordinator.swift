@@ -38,6 +38,8 @@ public class SceneCoordinator: Coordinator {
       topViewController.present(scene.viewController, animated: animated) {
         response.onNext(())
       }
+    case let .push(scene, animated):
+      topViewController.navigationController?.pushViewController(scene.viewController, animated: animated)
     default:
       fatalError()
     }
