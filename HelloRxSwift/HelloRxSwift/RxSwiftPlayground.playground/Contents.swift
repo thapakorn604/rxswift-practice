@@ -106,3 +106,5 @@ print(behaviorRelay.value) // the state of relay, it is the latest value
 
 behaviorRelay.accept(behaviorRelay.value + "the next one") // can be combined the old state and next state
 
+///////////////////////////////
+
